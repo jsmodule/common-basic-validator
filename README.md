@@ -27,9 +27,11 @@ ClassValidator.isExtend(Class, obj);
 
 ### ClassValidator
 
-* **function isClass(classType)**
+* **isClass**
 
-  Check the class type is a Class.
+  Defined: `function isClass(classType: Class): Boolean`
+
+  Describe: Check the class type is a Class.
 
   Examples:
 
@@ -43,21 +45,30 @@ ClassValidator.isExtend(Class, obj);
   ClassValidator.isClass(String);     //return true;
   ```
 
-* **function isExtend(baseClassType, classType)**
+* **isExtend**
 
-  Check the class type is extends from base class type.
+  Defined: `function isExtend(baseClassType: Class, classType: Class): Boolean`
+
+  Describe: Check the class type is extends from base class type.
 
   Examples:
 
   ```js
-  ClassValidator.isExtend(Object, String); //return true;
+  class A{};
+  class B extends A{};
+
+  ClassValidator.isExtend(Object, String);  //return true;
+  ClassValidator.isExtend(A, B);            //return true;
+  ClassValidator.isExtend(Object, B);       //return true;
   ```
 
 ### FunctionValidator
 
-* **function isFunction(fun)**
+* **isFunction**
 
-  Check the fun is a Function.
+  Defined: `function isFunction(fun: Function): Boolean`
+
+  Describe: Check the fun is a Function.
 
   Examples:
   ```js
@@ -68,9 +79,11 @@ ClassValidator.isExtend(Class, obj);
 
 ### NumberValidator
 
-* **function isNumber(num)**
+* **isNumber**
 
-  Check the num is a Number.
+  Defined: `function isNumber(num: Number): Boolean`
+
+  Describe: Check the num is a Number.
 
   Examples:
 
@@ -83,9 +96,11 @@ ClassValidator.isExtend(Class, obj);
 
 ### ObjectValidator
 
-* **function isObj(obj)**
+* **isObj**
 
-  Check the obj is a instance of Object;
+  Defined: `function isObj(obj: Object): Boolean`
+
+  Describe: Check the obj is a instance of Object;
 
   Examples:
 
@@ -98,9 +113,11 @@ ClassValidator.isExtend(Class, obj);
   ObjectValidator.isObj(new Object());  //return true;
   ```
 
-* **function isKindOf(classType, obj)**
+* **isKindOf**
 
-  Check the obj is belong this class type.
+  Defined: `function isKindOf(classType: Class, obj: Object): Boolean`
+
+  Describe: Check the obj is belong this class type.
 
   Examples:
 
@@ -116,9 +133,11 @@ ClassValidator.isExtend(Class, obj);
   ObjectValidator.isKindOf(Object, new B());  //return true;
   ```
 
-* **function isValid(obj)**
+* **isValid**
 
-  Check the obj is a valid object.
+  Defined: `function isValid(obj: Object): Boolean`
+
+  Describe: Check the obj is a valid object.
 
   Examples:
 
@@ -130,37 +149,28 @@ ClassValidator.isExtend(Class, obj);
   ObjectValidator.isValid(new Object());  //return true;
   ```
 
-* **function isEmpty(obj)**
+* **hasAnyProperty**
 
-  Check the obj is a empty object.
+  Defined: `function hasAnyProperty(obj: Object): Boolean`
 
-  Examples:
-
-  ```js
-  ObjectValidator.isEmpty(undefined);   //return true;
-  ObjectValidator.isEmpty(null);        //return true;
-  ObjectValidator.isEmpty({});          //return true;
-  ObjectValidator.isEmpty({a: 1});      //return false;
-  ```
-
-* **function isNotEmpty(obj)**
-
-  Check the obj is not a empty object.
+  Describe: Check the obj is not a empty object.
 
   Examples:
 
   ```js
-  ObjectValidator.isNotEmpty(undefined);  //return false;
-  ObjectValidator.isNotEmpty(null);       //return false;
-  ObjectValidator.isNotEmpty({});         //return false;
-  ObjectValidator.isNotEmpty({a: 1});     //return true;
+  ObjectValidator.hasAnyProperty(undefined);  //return false;
+  ObjectValidator.hasAnyProperty(null);       //return false;
+  ObjectValidator.hasAnyProperty({});         //return false;
+  ObjectValidator.hasAnyProperty({a: 1});     //return true;
   ```
 
 ### StringValidator
 
-* **function isString(str)**
+* **isString**
 
-  Check the str is a string.
+  Defined: `function isString(str: String): Boolean`
+
+  Describe: Check the str is a string.
 
   Examples:
 
@@ -171,9 +181,11 @@ ClassValidator.isExtend(Class, obj);
   StringValidator.isString(new String('a'));  //return false;
   ```
 
-* **function isEmpty(str)**
+* **isEmpty**
 
-  Check the str is a empty string.
+  Defined: `function isEmpty(str: String): Boolean`
+
+  Describe: Check the str is a empty string.
 
   Examples:
 
@@ -186,9 +198,11 @@ ClassValidator.isExtend(Class, obj);
   StringValidator.isEmpty(new String('a'));   //return false;
   ```
 
-* **function isNotEmpty(str)**
+* **isNotEmpty**
 
-  Check the str is not a empty string.
+  Defined: `function isNotEmpty(str: String): Boolean`
+
+  Describe: Check the str is not a empty string.
 
   Examples:
 
@@ -201,9 +215,11 @@ ClassValidator.isExtend(Class, obj);
   StringValidator.isEmpty(new String('a'));   //return true;
   ```
 
-* **function isBlank(str)**
+* **isBlank**
 
-  Check the str is a blank string.
+  Defined: `function isBlank(str: String): Boolean`
+
+  Describe: Check the str is a blank string.
 
   Examples:
 
@@ -218,9 +234,11 @@ ClassValidator.isExtend(Class, obj);
   StringValidator.isEmpty(new String('a'));   //return false;
   ```
 
-* **function isNotBlank(str)**
+* **isNotBlank**
 
-  Check the str is not a blank string.
+  Defined: `function isNotBlank(str: String): Boolean`
+
+  Describe: Check the str is not a blank string.
 
   Examples:
 
