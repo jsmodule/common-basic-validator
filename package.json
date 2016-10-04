@@ -1,5 +1,5 @@
 {
-  "name": "npm-common-package-stencil",
+  "name": "common-basic-validator",
   "version": "0.1.0",
   "description": "A stencil for build a common package",
   "main": "lib/index.js",
@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xqstencils/npm-common-package-stencil.git"
+    "url": "git+https://github.com/jsmodule/common-basic-validator.git"
   },
   "keywords": [
     "node",
@@ -51,7 +51,7 @@
   "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xqstencils/npm-common-package-stencil/issues"
+    "url": "https://github.com/jsmodule/common-basic-validator/issues"
   },
-  "homepage": "https://github.com/xqstencils/npm-common-package-stencil#readme"
+  "homepage": "https://github.com/jsmodule/common-basic-validator#readme"
 }

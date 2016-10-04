@@ -1,13 +1,13 @@
-# npm-common-package-stencil
+# common-basic-validator
 This is a stencils for common package.
 
 ## Current Status:
 
-[![NPM Version](https://img.shields.io/npm/v/npm-common-package-stencil.svg)](https://npmjs.org/package/npm-common-package-stencil)
-[![NPM Downloads](https://img.shields.io/npm/dm/npm-common-package-stencil.svg)](https://npmjs.org/package/npm-common-package-stencil)
-[![Build Status](https://travis-ci.org/xqstencils/npm-common-package-stencil.svg?branch=master)](https://travis-ci.org/xqstencils/npm-common-package-stencil)
+[![NPM Version](https://img.shields.io/npm/v/common-basic-validator.svg)](https://npmjs.org/package/common-basic-validator)
+[![NPM Downloads](https://img.shields.io/npm/dm/common-basic-validator.svg)](https://npmjs.org/package/common-basic-validator)
+[![Build Status](https://travis-ci.org/jsmodule/common-basic-validator.svg?branch=master)](https://travis-ci.org/jsmodule/common-basic-validator)
 
-[![NPM](https://nodei.co/npm/npm-common-package-stencil.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/npm-common-package-stencil/)
+[![NPM](https://nodei.co/npm/common-basic-validator.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/common-basic-validator/)
 
 ## Features:
 
@@ -20,7 +20,7 @@ This is a stencils for common package.
 
 ### Setup
 
-Copy this stencil and replace `npm-common-package-stencil` with your package name.
+Copy this stencil and replace `common-basic-validator` with your package name.
 
 ### Linting
 
