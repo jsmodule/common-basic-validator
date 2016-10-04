@@ -11,11 +11,7 @@ class ObjectValidator {
     return ObjectValidator.isObj(obj) && obj !== null;
   }
 
-  static isEmpty(obj) {
-    return !ObjectValidator.isValid(obj) || Object.keys(obj).length === 0;
-  }
-
-  static isNotEmpty(obj) {
+  static hasAnyProperty(obj) {
     return ObjectValidator.isValid(obj) && Object.keys(obj).length > 0;
   }
 }

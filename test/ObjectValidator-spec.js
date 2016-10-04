@@ -68,31 +68,21 @@ describe('ObjectValidator', () => {
     });
   });
 
-  describe('#isEmpty', () => {
-    it('should return true when given an empty obj', () => {
-      expect(ObjectValidator.isEmpty(emptyObj)).to.be.true;
+  describe('#hasAnyProperty', () => {
+    it('should return true when given an obj which have some properties', () => {
+      expect(ObjectValidator.hasAnyProperty(validObj)).to.be.true;
     });
 
     it('should return true when given an undefined', () => {
-      expect(ObjectValidator.isEmpty(undefined)).to.be.true;
+      expect(ObjectValidator.hasAnyProperty(undefined)).to.be.false;
     });
 
     it('should return true when given a null', () => {
-      expect(ObjectValidator.isEmpty(null)).to.be.true;
-    });
-
-    it('should return false when given an obj which have some properties', () => {
-      expect(ObjectValidator.isEmpty(validObj)).to.be.false;
-    });
-  });
-
-  describe('#isNotEmpty', () => {
-    it('should return true when given an obj which have some properties', () => {
-      expect(ObjectValidator.isNotEmpty(validObj)).to.be.true;
+      expect(ObjectValidator.hasAnyProperty(null)).to.be.false;
     });
 
     it('should return false when given an empty obj', () => {
-      expect(ObjectValidator.isNotEmpty(emptyObj)).to.be.false;
+      expect(ObjectValidator.hasAnyProperty(emptyObj)).to.be.false;
     });
   });
 });
