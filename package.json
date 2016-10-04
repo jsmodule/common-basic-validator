@@ -1,6 +1,6 @@
 {
   "name": "npm-common-package-stencil",
-  "version": "0.9.0",
+  "version": "0.1.0",
   "description": "A stencil for build a common package",
   "main": "lib/index.js",
   "engines": {
