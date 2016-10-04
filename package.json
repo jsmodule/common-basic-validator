@@ -1,0 +1,57 @@
+{
+  "name": "npm-common-package-stencil",
+  "version": "0.9.0",
+  "description": "A stencil for build a common package",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "eslint src",
+    "clean": "rm -rf ./lib",
+    "babel": "babel src -d lib",
+    "babel:watch": "watch 'npm run babel' ./src",
+    "build": "npm run clean && npm run babel",
+    "unit-test": "mocha --compilers js:babel-register test/",
+    "test": "npm run lint && npm run unit-test",
+    "test:watch": "watch 'npm run test' ./src ./test",
+    "prepare": "npm install && npm prune && npm run build",
+    "git-release": "/bin/bash ./ci/git-release.sh",
+    "npm-release": "/bin/bash ./ci/npm-release.sh",
+    "release": "npm run git-release && npm run npm-release"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.11.6",
+    "chai": "^3.5.0",
+    "eslint": "^3.2.0",
+    "mocha": "^3.0.0",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0",
+    "watch": "^0.19.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xqstencils/npm-common-package-stencil.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mocha"
+  ],
+  "author": "thomascxq <thomascxq@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xqstencils/npm-common-package-stencil/issues"
+  },
+  "homepage": "https://github.com/xqstencils/npm-common-package-stencil#readme"
+}
