@@ -1,6 +1,6 @@
 {
   "name": "common-basic-validator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A stencil for build a common package",
   "main": "lib/index.js",
   "engines": {
