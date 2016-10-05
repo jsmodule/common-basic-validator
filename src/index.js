@@ -1,3 +1,4 @@
+export Validator from './js/Validator';
 export ClassValidator from './js/ClassValidator';
 export NumberValidator from './js/NumberValidator';
 export ObjectValidator from './js/ObjectValidator';
