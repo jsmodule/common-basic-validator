@@ -25,6 +25,26 @@ ClassValidator.isExtend(Class, obj);
 
 ## API
 
+### Validator
+
+* **isAnyValidValue**
+
+  Defined: `function isAnyValidValue(anything: AnyType): Boolean`
+
+  Describe: Check the anything is any valid value.
+
+  Examples:
+
+  ```js
+  Validator.isAnyValidValue(Object);      //return true;
+  Validator.isAnyValidValue(() => {});    //return true;
+  Validator.isAnyValidValue({});          //return true;
+  Validator.isAnyValidValue('abc');       //return true;
+  Validator.isAnyValidValue(1);           //return true;
+  Validator.isAnyValidValue(undefined);   //return false;
+  Validator.isAnyValidValue(null);        //return false;
+  ```
+
 ### ClassValidator
 
 * **isClass**
