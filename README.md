@@ -60,6 +60,7 @@ ClassValidator.isExtend(Class, obj);
   ClassValidator.isExtend(Object, String);  //return true;
   ClassValidator.isExtend(A, B);            //return true;
   ClassValidator.isExtend(Object, B);       //return true;
+  ClassValidator.isExtend(B, A);            //return false;
   ```
 
 * **hasMethod**
@@ -76,8 +77,8 @@ ClassValidator.isExtend(Class, obj);
 
   ClassValidator.hasMethod(SubClass, 'subMethod');      //return true;
   ClassValidator.hasMethod(SubClass, 'superMethod');    //return true;
-  ClassValidator.hasMethod(SubClass, 'unknownMethod');  //return true;
-  ClassValidator.hasMethod(SuperClass, 'subMethod');    //return true;
+  ClassValidator.hasMethod(SubClass, 'unknownMethod');  //return false;
+  ClassValidator.hasMethod(SuperClass, 'subMethod');    //return false;
   ```
 
 ### FunctionValidator
@@ -143,12 +144,12 @@ ClassValidator.isExtend(Class, obj);
   class A{};
   class B extends A{};
 
-  ObjectValidator.isKindOf(B, new A());       //return false;
-  ObjectValidator.isKindOf(Object, 1);        //return false;
-  ObjectValidator.isKindOf(Object, 'abc');    //return false;
   ObjectValidator.isKindOf(A, new A());       //return true;
   ObjectValidator.isKindOf(A, new B());       //return true;
   ObjectValidator.isKindOf(Object, new B());  //return true;
+  ObjectValidator.isKindOf(B, new A());       //return false;
+  ObjectValidator.isKindOf(Object, 1);        //return false;
+  ObjectValidator.isKindOf(Object, 'abc');    //return false;
   ```
 
 * **isValid**
@@ -212,8 +213,8 @@ ClassValidator.isExtend(Class, obj);
   ```js
   StringValidator.isString(undefined);        //return false;
   StringValidator.isString(null);             //return false;
-  StringValidator.isString('abc');            //return false;
-  StringValidator.isString(new String('a'));  //return false;
+  StringValidator.isString('abc');            //return true;
+  StringValidator.isString(new String('a'));  //return true;
   ```
 
 * **isEmpty**
@@ -242,12 +243,12 @@ ClassValidator.isExtend(Class, obj);
   Examples:
 
   ```js
-  StringValidator.isEmpty(undefined);         //return false;
-  StringValidator.isEmpty(null);              //return false;
-  StringValidator.isEmpty('');                //return false;
-  StringValidator.isEmpty(new String());      //return false;
-  StringValidator.isEmpty('abc');             //return true;
-  StringValidator.isEmpty(new String('a'));   //return true;
+  StringValidator.isNotEmpty(undefined);         //return false;
+  StringValidator.isNotEmpty(null);              //return false;
+  StringValidator.isNotEmpty('');                //return false;
+  StringValidator.isNotEmpty(new String());      //return false;
+  StringValidator.isNotEmpty('abc');             //return true;
+  StringValidator.isNotEmpty(new String('a'));   //return true;
   ```
 
 * **isBlank**
@@ -259,14 +260,14 @@ ClassValidator.isExtend(Class, obj);
   Examples:
 
   ```js
-  StringValidator.isEmpty(undefined);         //return true;
-  StringValidator.isEmpty(null);              //return true;
-  StringValidator.isEmpty('');                //return true;
-  StringValidator.isEmpty('   ');             //return true;
-  StringValidator.isEmpty(new String());      //return true;
-  StringValidator.isEmpty(new String('  '));  //return true;
-  StringValidator.isEmpty('abc');             //return false;
-  StringValidator.isEmpty(new String('a'));   //return false;
+  StringValidator.isBlank(undefined);         //return true;
+  StringValidator.isBlank(null);              //return true;
+  StringValidator.isBlank('');                //return true;
+  StringValidator.isBlank('   ');             //return true;
+  StringValidator.isBlank(new String());      //return true;
+  StringValidator.isBlank(new String('  '));  //return true;
+  StringValidator.isBlank('abc');             //return false;
+  StringValidator.isBlank(new String('a'));   //return false;
   ```
 
 * **isNotBlank**
@@ -278,14 +279,14 @@ ClassValidator.isExtend(Class, obj);
   Examples:
 
   ```js
-  StringValidator.isEmpty(undefined);         //return false;
-  StringValidator.isEmpty(null);              //return false;
-  StringValidator.isEmpty('');                //return false;
-  StringValidator.isEmpty('   ');             //return false;
-  StringValidator.isEmpty(new String());      //return false;
-  StringValidator.isEmpty(new String('  '));  //return false;
-  StringValidator.isEmpty('abc');             //return true;
-  StringValidator.isEmpty(new String('a'));   //return true;
+  StringValidator.isNotBlank(undefined);         //return false;
+  StringValidator.isNotBlank(null);              //return false;
+  StringValidator.isNotBlank('');                //return false;
+  StringValidator.isNotBlank('   ');             //return false;
+  StringValidator.isNotBlank(new String());      //return false;
+  StringValidator.isNotBlank(new String('  '));  //return false;
+  StringValidator.isNotBlank('abc');             //return true;
+  StringValidator.isNotBlank(new String('a'));   //return true;
   ```
 
 ## License
