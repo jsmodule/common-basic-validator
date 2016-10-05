@@ -14,6 +14,10 @@ class ObjectValidator {
   static hasAnyProperty(obj) {
     return ObjectValidator.isValid(obj) && Object.keys(obj).length > 0;
   }
+
+  static hasProperty(obj, propertyName) {
+    return ObjectValidator.isValid(obj) && obj.hasOwnProperty(propertyName);
+  }
 }
 
 export default ObjectValidator;

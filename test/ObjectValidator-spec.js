@@ -85,4 +85,23 @@ describe('ObjectValidator', () => {
       expect(ObjectValidator.hasAnyProperty(emptyObj)).to.be.false;
     });
   });
+
+  describe('#hasProperty', () => {
+    it('should return true when given an obj which have [a] property', () => {
+      validObj.have = 1;
+      expect(ObjectValidator.hasProperty(validObj, 'have')).to.be.true;
+    });
+
+    it('should return false when given an obj which have not that property', () => {
+      expect(ObjectValidator.hasProperty(validObj, 'doNotHave')).to.be.false;
+    });
+
+    it('should return false when given an undefined obj', () => {
+      expect(ObjectValidator.hasProperty(undefined, 'have')).to.be.false;
+    });
+
+    it('should return true when given a null obj', () => {
+      expect(ObjectValidator.hasProperty(null, 'have')).to.be.false;
+    });
+  });
 });
