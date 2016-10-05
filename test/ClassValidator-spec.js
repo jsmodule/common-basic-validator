@@ -35,4 +35,22 @@ describe('ClassValidator', () => {
       expect(ClassValidator.isExtend(SubClass, SubClass)).to.be.false;
     });
   });
+
+  describe('#hasMethod', () => {
+    it('SubClass should has subMethod', () => {
+      expect(ClassValidator.hasMethod(SubClass, 'subMethod')).to.be.true;
+    });
+
+    it('SubClass should has superMethod', () => {
+      expect(ClassValidator.hasMethod(SubClass, 'superMethod')).to.be.true;
+    });
+
+    it('SubClass should not have unknown method', () => {
+      expect(ClassValidator.hasMethod(SubClass, 'unknownMethod')).to.be.false;
+    });
+
+    it('SuperClass should not have subMethod', () => {
+      expect(ClassValidator.hasMethod(SuperClass, 'subMethod')).to.be.false;
+    });
+  });
 });
