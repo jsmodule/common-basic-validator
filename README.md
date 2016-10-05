@@ -62,6 +62,24 @@ ClassValidator.isExtend(Class, obj);
   ClassValidator.isExtend(Object, B);       //return true;
   ```
 
+* **hasMethod**
+
+  Defined: `function hasMethod(classType: Class, methodName: String): Boolean`
+
+  Describe: Check the class have this method.
+
+  Examples:
+
+  ```js
+  class Super { superMethod() {} };
+  class Sub extends Super { subMethod() {} };
+
+  ClassValidator.hasMethod(SubClass, 'subMethod');      //return true;
+  ClassValidator.hasMethod(SubClass, 'superMethod');    //return true;
+  ClassValidator.hasMethod(SubClass, 'unknownMethod');  //return true;
+  ClassValidator.hasMethod(SuperClass, 'subMethod');    //return true;
+  ```
+
 ### FunctionValidator
 
 * **isFunction**
@@ -153,7 +171,7 @@ ClassValidator.isExtend(Class, obj);
 
   Defined: `function hasAnyProperty(obj: Object): Boolean`
 
-  Describe: Check the obj is not a empty object.
+  Describe: Check the obj has any property.
 
   Examples:
 
@@ -162,6 +180,23 @@ ClassValidator.isExtend(Class, obj);
   ObjectValidator.hasAnyProperty(null);       //return false;
   ObjectValidator.hasAnyProperty({});         //return false;
   ObjectValidator.hasAnyProperty({a: 1});     //return true;
+  ```
+
+* **hasProperty**
+
+  Defined: `function hasProperty(obj: Object, propertyName: String): Boolean`
+
+  Describe: Check the obj has property.
+
+  Examples:
+
+  ```js
+  var obj = { have: 1 };
+
+  ObjectValidator.hasProperty(obj, 'have');         //return true;
+  ObjectValidator.hasProperty(null, 'have');        //return false;
+  ObjectValidator.hasProperty(undefined, 'have');   //return false;
+  ObjectValidator.hasProperty(obj, 'doNotHave');    //return false;
   ```
 
 ### StringValidator
