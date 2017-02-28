@@ -18,7 +18,6 @@
     "unit-test": "mocha --compilers js:babel-register test/",
     "test": "npm run lint && npm run unit-test",
     "test:watch": "watch 'npm run test' ./src ./test",
-    "prepare": "npm install && npm prune && npm run build",
     "git-release": "/bin/bash ./ci/git-release.sh",
     "npm-release": "/bin/bash ./ci/npm-release.sh",
     "release": "npm run git-release && npm run npm-release"
