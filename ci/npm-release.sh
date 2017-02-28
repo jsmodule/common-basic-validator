@@ -1,5 +1,4 @@
 #! bin/bash
 set -e -u
 
-npm run prepare
-npm publish
+npm install && npm run build && npm publish

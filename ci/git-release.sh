@@ -10,8 +10,7 @@ if [ `git branch | grep tmp-release` ]; then
 fi
 git checkout -b tmp-release
 
-npm install
-npm run build
+npm install && npm run build
 git add -f lib/
 git commit -m "Release v$CURRENT_VERSION"
 git tag "v$CURRENT_VERSION"
