@@ -1,6 +1,6 @@
 class Validator {
   static isAnyValidValue(anything) {
-    return anything != undefined && anything != null;
+    return typeof anything !== 'undefined' && anything != null;
   }
 }
 
